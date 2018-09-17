@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "54d94d6a-e562-4ad8-9c81-3757f78af5e3",
+		"name": "Caller",
+		"description": "Api Documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "21e65e58-79c1-4b02-80e3-5823ecd3de32",
+			"name": "auth",
+			"item": [
+				{
+					"_postman_id": "c7b03783-7204-4700-9cd4-1eb4497f9324",
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "loginRequest"
+						},
+						"url": {
+							"raw": "http://localhost:8060/caller/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "f01dec85-9aed-412f-bf2e-da6e033fefa1",
+					"name": "logoutUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8060/caller/auth/logout?mobile={{mobile}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"auth",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "mobile",
+									"value": "{{mobile}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "945a814a-0f87-4ac6-80aa-7955e57e9871",
+					"name": "generateOtp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8060/caller/auth/otp?mobile={{mobile}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"auth",
+								"otp"
+							],
+							"query": [
+								{
+									"key": "mobile",
+									"value": "{{mobile}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "24236a9d-69e3-48d2-b144-facbc7be0e24",
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "user"
+						},
+						"url": {
+							"raw": "http://localhost:8060/caller/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for auth"
+		},
+		{
+			"_postman_id": "bfbc859a-e0db-4d82-9f1f-c7c3eb12a610",
+			"name": "data",
+			"item": [
+				{
+					"_postman_id": "45b82173-90cc-40e4-bb7d-4ae0ae22d979",
+					"name": "populateDummyData",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8060/caller/data/populate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"data",
+								"populate"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for data"
+		},
+		{
+			"_postman_id": "5053b93d-95b1-4730-ad0d-030dbd35e0f9",
+			"name": "search",
+			"item": [
+				{
+					"_postman_id": "17bcc3f8-39f7-4a5b-9d15-0ed4098f2a31",
+					"name": "searchNumber",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8060/caller/search/mobile?mobile={{mobile}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"search",
+								"mobile"
+							],
+							"query": [
+								{
+									"key": "mobile",
+									"value": "{{mobile}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "270f689f-70cc-429d-9d0f-36e34f4f74ab",
+					"name": "searchName",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8060/caller/search/name?name={{name}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"search",
+								"name"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{name}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for search"
+		},
+		{
+			"_postman_id": "ecade8c3-9b75-4ed5-b862-b4f84294cb73",
+			"name": "user",
+			"item": [
+				{
+					"_postman_id": "509c766a-adc9-4ed3-bd49-09473ee822f9",
+					"name": "updateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "mobile"
+						},
+						"url": {
+							"raw": "http://localhost:8060/caller/user/spam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"user",
+								"spam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "922e4fb6-a4c9-42b7-8b96-b6ca05c9a4eb",
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "user"
+						},
+						"url": {
+							"raw": "http://localhost:8060/caller/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "0e3024bc-ea6e-48db-adcb-f5c7db22a9b2",
+					"name": "updateContact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "contact"
+						},
+						"url": {
+							"raw": "http://localhost:8060/caller/user/update/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"user",
+								"update",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "9aa4b760-1749-4a3c-ad6b-df3dbc53b893",
+					"name": "uploadContacts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "contacts"
+						},
+						"url": {
+							"raw": "http://localhost:8060/caller/user/upload/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"caller",
+								"user",
+								"upload",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for user"
+		}
+	]
+}
